@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.javafxbea.SceneController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER" fx:id="MyMenuBar">
+            <menus>
+                <Menu mnemonicParsing="false" text="Adatbázis">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Olvas" onAction="#OlvasMenuItem" />
+                        <MenuItem mnemonicParsing="false" text="Olvas2" onAction="#Olvas2MenuItem" />
+                        <MenuItem mnemonicParsing="false" text="Ír" onAction="#IrMenuItem" />
+                        <MenuItem mnemonicParsing="false" text="Módosít" onAction="#ModMenuItem" />
+                        <MenuItem mnemonicParsing="false" text="Töröl" onAction="#DelMenuItem"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Egyéb">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#ParhuzaMenuItem" text="Párhuzamos" />
+                    </items></Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>

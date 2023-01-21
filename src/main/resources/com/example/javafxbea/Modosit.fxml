@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxbea.ModController">
+    <top>
+        <MenuBar fx:id="MyMenuBar" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Adatbázis">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#OlvasMenuItem" text="Olvas" />
+                        <MenuItem mnemonicParsing="false" onAction="#Olvas2MenuItem" text="Olvas2" />
+                        <MenuItem mnemonicParsing="false" onAction="#IrMenuItem" text="Ír" />
+                        <MenuItem mnemonicParsing="false" onAction="#ModMenuItem" text="Módosít" />
+                        <MenuItem mnemonicParsing="false" onAction="#DelMenuItem" text="Töröl" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Egyéb">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#ParhuzaMenuItem" text="Párhuzamos" />
+                    </items></Menu>
+            </menus>
+        </MenuBar>
+    </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="TableSelectCB" layoutX="14.0" layoutY="14.0" onAction="#TableSelected" prefWidth="150.0" promptText="Válasszon táblát...." />
+            <AnchorPane fx:id="utAP" layoutX="24.0" layoutY="55.0" prefHeight="224.0" prefWidth="563.0">
+               <children>
+                  <ComboBox fx:id="utIdSelect" layoutX="14.0" layoutY="14.0" onAction="#utIdSelected" prefHeight="25.0" prefWidth="162.0" promptText="Válasszon azonosítót..." />
+                  <TextField fx:id="utnevTF" layoutX="14.0" layoutY="65.0" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField fx:id="hosszTF" layoutX="172.0" layoutY="65.0" prefHeight="25.0" prefWidth="54.0" />
+                  <TextField fx:id="allomasTF" layoutX="236.0" layoutY="65.0" prefHeight="25.0" prefWidth="58.0" />
+                  <TextField fx:id="idoTF" layoutX="308.0" layoutY="65.0" prefHeight="25.0" prefWidth="49.0" />
+                  <CheckBox fx:id="vezCheckBox" layoutX="369.0" layoutY="69.0" mnemonicParsing="false" text="Vezetés?" />
+                  <TextField fx:id="telidTF" layoutX="445.0" layoutY="65.0" prefHeight="25.0" prefWidth="48.0" />
+                  <Label layoutX="14.0" layoutY="48.0" text="Út név" />
+                  <Label layoutX="172.0" layoutY="48.0" text="hossz" />
+                  <Label layoutX="236.0" layoutY="48.0" text="állomás" />
+                  <Label layoutX="308.0" layoutY="48.0" text="idő" />
+                  <Label layoutX="445.0" layoutY="48.0" text="településid" />
+                  <Button fx:id="utSubBtn" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" onAction="#utUpdateBtn" text="Módosítás" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="npAP" layoutX="14.0" layoutY="55.0" prefHeight="224.0" prefWidth="565.0" visible="false">
+               <children>
+                  <ComboBox fx:id="npIdSelect" layoutX="23.0" layoutY="14.0" onAction="#npIdSelected" prefHeight="25.0" prefWidth="165.0" promptText="Válasszon azonosítót..." />
+                  <Label layoutX="14.0" layoutY="49.0" text="Nemzeti Park" />
+                  <TextField fx:id="parknevTF" layoutX="15.0" layoutY="66.0" prefHeight="25.0" prefWidth="219.0" />
+                  <Button fx:id="npSubBtn" layoutX="24.0" layoutY="106.0" mnemonicParsing="false" onAction="#npUpdateBtn" text="Módosítás" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="telAP" layoutX="22.0" layoutY="55.0" prefHeight="241.0" prefWidth="556.0" visible="false">
+               <children>
+                  <ComboBox fx:id="telIdSelect" layoutX="14.0" layoutY="14.0" onAction="#telIdSelected" prefHeight="25.0" prefWidth="164.0" promptText="Válasszon azonosítót..." />
+                  <TextField fx:id="telnevTF" layoutX="19.0" layoutY="66.0" />
+                  <TextField fx:id="npidTF" layoutX="178.0" layoutY="66.0" prefHeight="25.0" prefWidth="60.0" />
+                  <Label layoutX="19.0" layoutY="49.0" prefHeight="17.0" prefWidth="79.0" text="Település név" />
+                  <Label layoutX="178.0" layoutY="49.0" prefHeight="17.0" prefWidth="79.0" text="Park id" />
+                  <Button fx:id="telSubBtn" layoutX="23.0" layoutY="108.0" mnemonicParsing="false" onAction="#telUpdateBtn" text="Módosítás" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

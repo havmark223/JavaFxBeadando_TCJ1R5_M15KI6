@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="804.0" prefWidth="1297.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxbea.OlvasController">
+    <top>
+        <MenuBar fx:id="MyMenuBar" prefHeight="0.0" prefWidth="619.0" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Adatbázis">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#OlvasMenuItem" text="Olvas" />
+                        <MenuItem mnemonicParsing="false" onAction="#Olvas2MenuItem" text="Olvas2" />
+                        <MenuItem mnemonicParsing="false" onAction="#IrMenuItem" text="Ír" />
+                        <MenuItem mnemonicParsing="false" onAction="#ModMenuItem" text="Módosít" />
+                        <MenuItem mnemonicParsing="false" onAction="#DelMenuItem" text="Töröl" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Egyéb">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#ParhuzaMenuItem" text="Párhuzamos" />
+                    </items></Menu>
+            </menus>
+        </MenuBar>
+    </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="TableUt" layoutY="57.0" prefHeight="685.0" prefWidth="554.0">
+                     <columns>
+                        <TableColumn fx:id="columnUtid" prefWidth="43.0" text="Utid" />
+                        <TableColumn fx:id="columnUtnev" prefWidth="219.0" text="Utnev" />
+                        <TableColumn fx:id="columnHossz" prefWidth="41.0" text="Hossz" />
+                        <TableColumn fx:id="columnAllomas" prefWidth="63.0" text="Allomas" />
+                        <TableColumn fx:id="columnIdo" prefWidth="48.0" text="Ido" />
+                        <TableColumn fx:id="columnVezetes" prefWidth="69.0" text="Vezetes" />
+                        <TableColumn fx:id="columnTelepulesid" prefWidth="70.0" text="Telepulesid" />
+                     </columns>
+                  </TableView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="216.0" layoutY="14.0" prefHeight="35.0" prefWidth="103.0" text="Út tábla" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="779.0" prefWidth="334.0">
+               <children>
+                  <TableView fx:id="TableTel" layoutX="29.0" layoutY="58.0" prefHeight="678.0" prefWidth="277.0">
+                    <columns>
+                      <TableColumn fx:id="columnTelid" prefWidth="38.0" text="Telid" />
+                      <TableColumn fx:id="columnTelnev" prefWidth="185.0" text="Telnev" />
+                        <TableColumn fx:id="columnNpid" prefWidth="62.0" text="Npid" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="33.0" layoutY="14.0" prefHeight="35.0" prefWidth="265.0" text="Település tábla" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="779.0" prefWidth="302.0">
+               <children>
+                  <TableView fx:id="TableNp" layoutX="14.0" layoutY="56.0" prefHeight="686.0" prefWidth="271.0">
+                    <columns>
+                      <TableColumn fx:id="columnParkid" prefWidth="51.0" text="Parkid" />
+                      <TableColumn fx:id="columnParknev" minWidth="6.0" prefWidth="216.0" text="Parknev" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="14.0" prefHeight="35.0" prefWidth="266.0" text="Nezeti Park Tábla" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
